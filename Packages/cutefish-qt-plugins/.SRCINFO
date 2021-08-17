@@ -1,0 +1,24 @@
+pkgbase = cutefish-qt-plugins
+	pkgdesc = Unify Qt application style of CutefishOS
+	pkgver = 0.3
+	pkgrel = 1
+	url = https://github.com/cutefishos/qt-plugins
+	arch = x86_64
+	groups = cutefish
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = ninja-build
+	makedepends = qttools5-dev-tools
+	makedepends = qtbase5-dev
+	makedepends = qtdeclarative5-dev
+	makedepends = qtquickcontrols2-5-dev
+	makedepends = libxcb-ewmh-dev
+	makedepends = qttools5-dev
+	depends = libkf5windowsystem-dev
+	depends = libdbusmenu-qt5-dev
+	depends = libqt5xdg-dev
+	depends = qtquickcontrols2-5-dev
+	source = https://github.com/cutefishos/qt-plugins/archive/0.3/cutefish-qt-plugins-0.3.tar.gz
+	sha512sums = 69bc440e6285be6fc702d5f27b2178e009f9609af2658700555d295a4584c82636821b9b1fe30e4b2511d6e68612b9bc131480f388c7d9395e45381d9b6258c2
+
+pkgname = cutefish-qt-plugins

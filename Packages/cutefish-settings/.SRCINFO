@@ -1,0 +1,27 @@
+pkgbase = cutefish-settings
+	pkgdesc = System Settings application for Cutefish Desktop
+	pkgver = 0.3
+	pkgrel = 1
+	url = https://github.com/cutefishos/settings
+	arch = x86_64
+	groups = cutefish
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = ninja-build
+	makedepends = qttools5-dev-tools
+	makedepends = qtbase5-dev
+	makedepends = qtdeclarative5-dev
+	makedepends = qtquickcontrols2-5-dev
+	makedepends = qttools5-dev
+	depends = fishui
+	depends = libfontconfig1
+	depends = libfreetype-dev
+	depends = libicu-dev
+	depends = libkf5coreaddons-dev
+	depends = libcutefish
+	depends = modemmanager-qt-dev
+	depends = libkf5networkmanagerqt-dev
+	source = https://github.com/cutefishos/settings/archive/0.3/cutefish-settings-0.3.tar.gz
+	sha512sums = e25fe45a2140a18780d53947bd41a44a90ae1425fbd7af09b2000f0712a9489b00fe855c64efee4aa7d558b10f1e62cc1d6dbc6ac4f8e3dc5d38d6f17aa14588
+
+pkgname = cutefish-settings

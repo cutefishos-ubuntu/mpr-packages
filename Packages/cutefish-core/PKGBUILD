@@ -1,0 +1,29 @@
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Maksym Titenko <titenko.m@gmail.com>
+# Maksym Titenko - Port for Ubuntu
+
+pkgname=cutefish-core
+pkgver=0.3
+pkgrel=1
+pkgdesc="System components and backend of CutefishOS"
+arch=('x86_64')
+url="https://github.com/cutefishos/core"
+control_fields=("MPR-Package: ${pkgname}")
+license=('GPL')
+groups=('cutefish')
+depends=( 'fishui' 'libpulse-dev' 'libxtst6' 'libpolkit-agent-1-dev' 'libxcb-randr0-dev' 'libxcb1-dev' 'libsm-dev' 'libxcursor-dev' 'libxcb-xfixes0-dev' 'libxcb-damage0-dev' 'libxcb-composite0-dev' 'libxcb-shm0-dev' 'libxcb-util-dev' 'libxcb-image0-dev' 'libxtst-dev' 'libpulse-dev' 'libpolkit-qt5-1-dev' 'libkf5windowsystem-dev' 'libkf5globalaccel-dev' 'libqt5x11extras5-dev' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev' 'qttools5-dev-tools')
+makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
+source=("https://github.com/cutefishos/core/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+sha512sums=('86100d08db3f5c52561d2361228396a69f8d7621d039e125da349fa10f8b7716f38d090a936df8b2aa1d4797d6a40aa06147d40b51b5859b75de7f4bb9ea2dc1')
+
+build() {
+  cd core-$pkgver
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  make
+}
+
+package() {
+  cd core-$pkgver
+  make DESTDIR="$pkgdir" install
+}

@@ -1,0 +1,30 @@
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Maksym Titenko <titenko.m@gmail.com>
+# Maksym Titenko - Port for Ubuntu
+# Aryan Pathania (aynp)
+
+pkgname=cutefish-dock
+pkgver=0.3
+pkgrel=1
+pkgdesc="CutefishOS application dock"
+arch=('x86_64')
+url="https://github.com/cutefishos/dock"
+control_fields=("MPR-Package: ${pkgname}")
+license=('GPL')
+groups=('cutefish')
+depends=('fishui' 'libcutefish' 'libqt5svg5-dev')
+makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev' 'libqt5x11extras5-dev' 'libkf5windowsystem-dev')
+source=("https://github.com/cutefishos/dock/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+sha512sums=('0041267d0a2faee004e8049d32d691f885681e85a0e5366fe6019cf2bcb4b4afe3482b2642825388d732a861eb61ad39c98d50a0648a5ea93d2e1e9e69645199')
+
+build() {
+  cd dock-$pkgver
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  make
+}
+
+package() {
+  cd dock-$pkgver
+  make DESTDIR="$pkgdir" install
+}

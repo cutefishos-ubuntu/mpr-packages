@@ -1,0 +1,30 @@
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Maksym Titenko <titenko.m@gmail.com>
+# Maksym Titenko - Port for Ubuntu
+# Aryan Pathania (aynp)
+
+pkgname=cutefish-settings
+pkgver=0.3
+pkgrel=1
+pkgdesc="System Settings application for Cutefish Desktop"
+arch=('x86_64')
+url="https://github.com/cutefishos/settings"
+control_fields=("MPR-Package: ${pkgname}")
+license=('GPL')
+groups=('cutefish')
+depends=('fishui' 'libfontconfig1' 'libfreetype-dev' 'libicu-dev' 'libkf5coreaddons-dev' 'libcutefish' 'modemmanager-qt-dev' 'libkf5networkmanagerqt-dev')
+makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
+source=("https://github.com/cutefishos/settings/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+sha512sums=('e25fe45a2140a18780d53947bd41a44a90ae1425fbd7af09b2000f0712a9489b00fe855c64efee4aa7d558b10f1e62cc1d6dbc6ac4f8e3dc5d38d6f17aa14588')
+
+build() {
+  cd settings-$pkgver
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  make
+}
+
+package() {
+  cd settings-$pkgver
+  make DESTDIR="$pkgdir" install
+}

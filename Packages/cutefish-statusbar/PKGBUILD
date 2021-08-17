@@ -1,0 +1,30 @@
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Maksym Titenko <titenko.m@gmail.com>
+# Maksym Titenko - Port for Ubuntu
+# Aryan Pathania (aynp)
+
+pkgname=cutefish-statusbar
+pkgver=0.3
+pkgrel=1
+pkgdesc="Top status bar of CutefishOS"
+arch=('x86_64')
+url="https://github.com/cutefishos/statusbar"
+control_fields=("MPR-Package: ${pkgname}")
+license=('GPL')
+groups=('cutefish')
+depends=('fishui' 'libcutefish' 'libdbusmenu-qt5-dev' 'libqt5svg5-dev')
+makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
+source=("https://github.com/cutefishos/statusbar/archive/$pkgver/$pkgname-$pkgver.tar.gz")
+sha512sums=('b023fd1cdd461e93ad102408d0202679a6b122d50861372236e596a77aa7495314c0279ef7c3b1effa3209d2666efb636b70a49dc878bf63d20c9cc2f06de242')
+
+build() {
+  cd statusbar-$pkgver
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr .
+  make
+}
+
+package() {
+  cd statusbar-$pkgver
+  make DESTDIR="$pkgdir" install
+}

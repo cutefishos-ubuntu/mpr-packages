@@ -1,0 +1,24 @@
+pkgbase = fishui
+	pkgdesc = GUI library based on QQC2 for Cutefish applications
+	pkgver = 0.3
+	pkgrel = 1
+	url = https://github.com/cutefishos/fishui
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = ninja-build
+	makedepends = qttools5-dev-tools
+	makedepends = qtbase5-dev
+	makedepends = qtdeclarative5-dev
+	makedepends = qtquickcontrols2-5-dev
+	makedepends = qttools5-dev
+	depends = libkf5windowsystem5
+	depends = libxcb-icccm4-dev
+	depends = qtquickcontrols2-5-dev
+	depends = qtbase5-private-dev
+	depends = libxcb-shape0-dev
+	depends = libxcb-keysyms1-dev
+	source = https://github.com/cutefishos/fishui/archive/0.3/fishui-0.3.tar.gz
+	sha512sums = db6562c9d612061dfcd99c8dcf1a47506009916515c93b2f0285e10eeef9164d2b0739b8e4195dc7ff0c6ff10f952f2ae7bc2937d9491aaba9c125ff2a20b716
+
+pkgname = fishui
