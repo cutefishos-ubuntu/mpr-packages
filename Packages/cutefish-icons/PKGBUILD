@@ -14,8 +14,8 @@ license=('GPL')
 groups=('cutefish')
 depends=()
 makedepends=('extra-cmake-modules' 'ninja-build')
-source=("https://github.com/cutefishos/icons/archive/$pkgver/$pkgname-$pkgver.tar.gz")
-sha512sums=('460247dddf26dea382edcc83e644bf4f3eae26dd3fbdc9176607b21c70e40c52ab5174cd38faf0d2ef9afe3df5cc804779afc696be633a10b47edfd264d298ec')
+source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+md5sums=('SKIP')
 
 build() {
   cd icons-$pkgver
