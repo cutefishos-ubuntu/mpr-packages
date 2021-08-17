@@ -14,8 +14,8 @@ license=('GPL')
 groups=('cutefish')
 depends=('libkf5windowsystem-dev' 'libdbusmenu-qt5-dev' 'libqt5xdg-dev' 'qtquickcontrols2-5-dev')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'libxcb-ewmh-dev' 'qttools5-dev')
-source=("https://github.com/cutefishos/qt-plugins/archive/$pkgver/$pkgname-$pkgver.tar.gz")
-sha512sums=('69bc440e6285be6fc702d5f27b2178e009f9609af2658700555d295a4584c82636821b9b1fe30e4b2511d6e68612b9bc131480f388c7d9395e45381d9b6258c2')
+source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+md5sums=('SKIP')
 
 build() {
   cd qt-plugins-$pkgver
