@@ -14,8 +14,8 @@ license=('GPL')
 groups=('cutefish')
 depends=('fishui' 'libfontconfig1' 'libfreetype-dev' 'libicu-dev' 'libkf5coreaddons-dev' 'libcutefish' 'modemmanager-qt-dev' 'libkf5networkmanagerqt-dev')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
-source=("https://github.com/cutefishos/settings/archive/$pkgver/$pkgname-$pkgver.tar.gz")
-sha512sums=('e25fe45a2140a18780d53947bd41a44a90ae1425fbd7af09b2000f0712a9489b00fe855c64efee4aa7d558b10f1e62cc1d6dbc6ac4f8e3dc5d38d6f17aa14588')
+source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+md5sums=('SKIP')
 
 build() {
   cd settings-$pkgver
