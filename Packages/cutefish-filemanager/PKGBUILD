@@ -14,8 +14,8 @@ license=('GPL')
 groups=('cutefish')
 depends=('fishui' 'libcutefish' 'kio' 'libkf5solid-dev')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
-source=("https://github.com/cutefishos/filemanager/archive/$pkgver/$pkgname-$pkgver.tar.gz")
-sha512sums=('6a1b15ab6b71db2acdec233f13e03be7fa0d2768495b78622e4ff357a0e54bd59582cf4821e1dc35851ff5d25d617380c3779c863271931cceda60f24b868a1b')
+source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+md5sums=('SKIP')
 
 build() {
   cd filemanager-$pkgver
