@@ -16,8 +16,8 @@ conflicts=('deepin-kwin')
 depends=('libkf5config-dev' 'libkdecorations2-dev' 'libkf5guiaddons-dev' 'libkf5coreaddons-dev' 'libkf5configwidgets-dev' 'libkf5windowsystem-dev'
          'libkf5wayland-dev' 'kwin-dev')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
-source=("https://github.com/cutefishos/kwin-plugins/archive/$pkgver/$pkgname-$pkgver.tar.gz")
-sha512sums=('5c93d0900a3f67722a75573f903312508f76b08500df3c9bc75f2f2c7cacf702accff72966cf0616da358ac48d7eccd49cec119022847ee58b08b8942866645b')
+source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+md5sums=('SKIP')
 
 build() {
   cd kwin-plugins-$pkgver
