@@ -3,7 +3,7 @@
 # Maintainer: Aryan Pathania <aynp>
 
 pkgname=fishui
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="GUI library based on QQC2 for Cutefish applications"
 arch=('x86_64')
