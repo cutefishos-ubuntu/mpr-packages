@@ -1,6 +1,5 @@
-# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
 # Maintainer: Maksym Titenko <titenko.m@gmail.com>
-# Maksym Titenko - Port for Ubuntu
 
 pkgname=cutefish-core
 pkgver=0.3
