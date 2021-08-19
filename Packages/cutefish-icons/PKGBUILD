@@ -13,17 +13,17 @@ license=('GPL')
 groups=('cutefish')
 depends=()
 makedepends=('extra-cmake-modules' 'ninja-build')
-source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+source=("${pkgname}::git+https://github.com/cutefishos/icons.git")
 md5sums=('SKIP')
 
 build() {
-  cd icons-$pkgver
+  cd ${pkgname}
 
   cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr .
   ninja
 }
 
 package() {
-  cd icons-$pkgver
+  cd ${pkgname}
   DESTDIR="$pkgdir" ninja install
 }

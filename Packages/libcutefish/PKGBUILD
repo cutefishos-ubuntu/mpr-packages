@@ -18,13 +18,13 @@ source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
 md5sums=('SKIP')
 
 build() {
-  cd $pkgname-$pkgver
+  cd $pkgname
 
   cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr .
   ninja
 }
 
 package() {
-  cd $pkgname-$pkgver
+  cd $pkgname
   DESTDIR="$pkgdir" ninja install
 }

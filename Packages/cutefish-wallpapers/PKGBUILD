@@ -13,17 +13,17 @@ license=('GPL')
 groups=('cutefish')
 depends=()
 makedepends=('cmake' 'ninja-build')
-source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+source=("${pkgname}::git+https://github.com/cutefishos/wallpapers.git")
 md5sums=('SKIP')
 
 build() {
-  cd wallpapers-$pkgver
+  cd ${pkgname}
 
   cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr .
   ninja
 }
 
 package() {
-  cd wallpapers-$pkgver
+  cd ${pkgname}
   DESTDIR="$pkgdir" ninja install
 }

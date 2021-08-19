@@ -13,17 +13,17 @@ license=('GPL')
 groups=('cutefish')
 depends=('fishui' 'libcutefish')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
-source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+source=("${pkgname}::git+https://github.com/cutefishos/calculator.git")
 md5sums=('SKIP')
 
 build() {
-  cd calculator-$pkgver
+  cd ${pkgname}
 
   cmake -DCMAKE_INSTALL_PREFIX=/usr .
   make
 }
 
 package() {
-  cd calculator-$pkgver
+  cd ${pkgname}
   make DESTDIR="$pkgdir" install
 }

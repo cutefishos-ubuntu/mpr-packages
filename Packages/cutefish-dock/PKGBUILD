@@ -13,17 +13,17 @@ license=('GPL')
 groups=('cutefish')
 depends=('fishui' 'libcutefish' 'libqt5svg5-dev')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev' 'libqt5x11extras5-dev' 'libkf5windowsystem-dev')
-source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+source=("${pkgname}::git+https://github.com/cutefishos/dock.git")
 md5sums=('SKIP')
 
 build() {
-  cd dock-$pkgver
+  cd ${pkgname}
 
   cmake -DCMAKE_INSTALL_PREFIX=/usr .
   make
 }
 
 package() {
-  cd dock-$pkgver
+  cd ${pkgname}
   make DESTDIR="$pkgdir" install
 }

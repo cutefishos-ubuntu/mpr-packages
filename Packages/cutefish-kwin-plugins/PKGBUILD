@@ -15,17 +15,17 @@ conflicts=('deepin-kwin')
 depends=('libkf5config-dev' 'libkdecorations2-dev' 'libkf5guiaddons-dev' 'libkf5coreaddons-dev' 'libkf5configwidgets-dev' 'libkf5windowsystem-dev'
          'libkf5wayland-dev' 'kwin-dev')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
-source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
+source=("${pkgname}::git+https://github.com/cutefishos/kwin-plugins.git")
 md5sums=('SKIP')
 
 build() {
-  cd kwin-plugins-$pkgver
+  cd ${pkgname}
 
   cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr .
   ninja
 }
 
 package() {
-  cd kwin-plugins-$pkgver
+  cd ${pkgname}
   DESTDIR="$pkgdir" ninja install
 }
