@@ -3,7 +3,7 @@
 # Maintainer: Aryan Pathania <aynp>
 
 pkgname=cutefish-icons
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="System default icon theme of CutefishOS"
 arch=('any')
