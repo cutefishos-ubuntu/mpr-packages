@@ -1,7 +1,6 @@
-# Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
 # Maintainer: Maksym Titenko <titenko.m@gmail.com>
-# Maksym Titenko - Port for Ubuntu
-# Aryan Pathania (aynp)
+# Maintainer: Aryan Pathania <aynp>
 
 pkgname=cutefish-qt-plugins
 pkgver=0.3
