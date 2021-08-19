@@ -3,7 +3,7 @@
 # Maintainer: Aryan Pathania <aynp>
 
 pkgname=cutefish-statusbar
-pkgver=0.3
+pkgver=0.4
 pkgrel=1
 pkgdesc="Top status bar of CutefishOS"
 arch=('x86_64')
