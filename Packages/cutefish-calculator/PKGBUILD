@@ -3,8 +3,8 @@
 # Maintainer: Aryan Pathania (aynp)
 
 pkgname=cutefish-calculator
-pkgver=0.1
-pkgrel=2
+pkgver=0.4
+pkgrel=1
 pkgdesc="CutefishOS Calculator"
 arch=('x86_64')
 url="https://github.com/cutefishos/calculator"
