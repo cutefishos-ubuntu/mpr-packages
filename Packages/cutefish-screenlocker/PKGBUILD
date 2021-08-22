@@ -11,7 +11,7 @@ control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
 groups=('cutefish')
 depends=('fishui' 'libcutefish')
-makedepends=('extra-cmake-modules' 'qt5-tools')
+makedepends=('extra-cmake-modules' 'qttools5-dev')
 source=("${pkgname}::git+https://github.com/cutefishos/screenlocker.git")
 md5sums=('SKIP')
 
