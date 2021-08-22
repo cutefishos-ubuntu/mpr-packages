@@ -10,8 +10,20 @@ arch=('x86_64')
 url="https://github.com/cutefishos/fishui"
 control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
-depends=('libkf5windowsystem5' 'libxcb-icccm4-dev' 'qtquickcontrols2-5-dev' 'qtbase5-private-dev' 'libxcb-shape0-dev' 'libxcb-keysyms1-dev')
-makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
+depends=(
+'qml-module-qtquick-controls2'
+'qml-module-qtquick2'
+'libc6'
+'libgcc-s1'
+'libkf5windowsystem5'
+'libqt5core5a'
+'libqt5dbus5'
+'libqt5gui5'
+'libqt5qml5'
+'libqt5quick5'
+'libqt5x11extras5'
+'libstdc++6' )
+makedepends=('extra-cmake-modules' 'ninja-build' 'libxcb1-dev' 'libxcb-shape0-dev' 'libxcb-icccm4-dev' 'libkf5windowsystem-dev' 'libqt5x11extras5-dev' 'qtbase5-dev' 'qtbase5-private-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev' 'qttools5-dev-tools')
 source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
 md5sums=('SKIP')
 

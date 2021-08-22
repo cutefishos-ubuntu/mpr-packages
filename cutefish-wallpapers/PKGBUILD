@@ -2,18 +2,17 @@
 # Maintainer: Maksym Titenko <titenko.m@gmail.com>
 # Maintainer: Aryan Pathania <aynp>
 
-pkgname=cutefish-icons
+pkgname=cutefish-wallpapers
 pkgver=0.4
 pkgrel=1
-pkgdesc="System default icon theme of CutefishOS"
+pkgdesc="CutefishOS system wallpaper"
 arch=('any')
-url="https://github.com/cutefishos/icons"
+url="https://github.com/cutefishos/wallpapers"
 control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
 groups=('cutefish')
-depends=()
-makedepends=('extra-cmake-modules' 'ninja-build')
-source=("${pkgname}::git+https://github.com/cutefishos/icons.git")
+makedepends=('cmake' 'ninja-build')
+source=("${pkgname}::git+https://github.com/cutefishos/wallpapers.git")
 md5sums=('SKIP')
 
 build() {

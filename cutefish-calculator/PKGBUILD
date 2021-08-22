@@ -2,18 +2,18 @@
 # Maintainer: Maksym Titenko <titenko.m@gmail.com>
 # Maintainer: Aryan Pathania <aynp>
 
-pkgname=cutefish-statusbar
+pkgname=cutefish-calculator
 pkgver=0.4
 pkgrel=1
-pkgdesc="Top status bar of CutefishOS"
+pkgdesc="CutefishOS Calculator"
 arch=('x86_64')
-url="https://github.com/cutefishos/statusbar"
+url="https://github.com/cutefishos/calculator"
 control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
 groups=('cutefish')
-depends=('fishui' 'libcutefish' 'libdbusmenu-qt5-dev' 'libqt5svg5-dev')
+depends=('fishui' 'libcutefish')
 makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
-source=("${pkgname}::git+https://github.com/cutefishos/statusbar.git")
+source=("${pkgname}::git+https://github.com/cutefishos/calculator.git")
 md5sums=('SKIP')
 
 build() {

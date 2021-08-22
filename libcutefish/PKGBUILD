@@ -10,10 +10,37 @@ arch=('x86_64')
 url="https://github.com/cutefishos/libcutefish"
 control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
-depends=('kscreen' 'modemmanager-qt-dev' 'libkf5networkmanagerqt-dev' 'libqt5quickcontrols2-5' 'libkf5screen-dev' 'libkf5kio-dev' 'libqt5sensors5-dev'
+depends=(
+'libc6'
+'libgcc-s1'
+'libkf5bluezqt6'
+'libkf5coreaddons5'
+'libkf5networkmanagerqt6'
+'libkf5screen-bin'
+'libkf5screen7'
+'libqt5core5a'
+'libqt5dbus5'
+'libqt5gui5'
+'libqt5network5'
+'libqt5qml5'
+'libqt5sensors5'
+'libstdc++6'
          # via dbus:
          'accountsservice' 'bluez')
-makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
+makedepends=(
+'extra-cmake-modules'
+'ninja-build'
+'libkf5networkmanagerqt-dev'
+'libkf5kio-dev'
+'libkf5screen-dev'
+'libkf5bluezqt-dev'
+'modemmanager-qt-dev'
+'libqt5sensors5-dev'
+'qtbase5-dev'
+'qtdeclarative5-dev'
+'qtquickcontrols2-5-dev'
+'qttools5-dev'
+'qttools5-dev-tools')
 source=("${pkgname}::git+https://github.com/cutefishos/$pkgname.git")
 md5sums=('SKIP')
 

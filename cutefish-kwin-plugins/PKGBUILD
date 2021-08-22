@@ -12,9 +12,38 @@ control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
 groups=('cutefish')
 conflicts=('deepin-kwin')
-depends=('libkf5config-dev' 'libkdecorations2-dev' 'libkf5guiaddons-dev' 'libkf5coreaddons-dev' 'libkf5configwidgets-dev' 'libkf5windowsystem-dev'
-         'libkf5wayland-dev' 'kwin-dev')
-makedepends=('extra-cmake-modules' 'ninja-build' 'qttools5-dev-tools' 'qtbase5-dev' 'qtdeclarative5-dev' 'qtquickcontrols2-5-dev' 'qttools5-dev')
+depends=(
+'fishui'
+'qml-module-qtquick-controls2'
+'qml-module-qtquick2'
+'libc6'
+'libepoxy0'
+'libgcc-s1'
+'libkdecorations2-5v5'
+'libkf5coreaddons5'
+'libkwineffects13'
+'libkwinglutils13'
+'libqt5core5a'
+'libqt5gui5'
+'libstdc++6'
+# qml:
+'plasma-framework')
+makedepends=(
+'extra-cmake-modules'
+'ninja-build'
+'kwin-dev'
+'libkf5windowsystem-dev'
+'libkf5globalaccel-dev'
+'libkf5config-dev'
+'libkdecorations2-dev'
+'libkf5coreaddons-dev'
+'libqt5opengl5-dev'
+'qtbase5-dev'
+'qtbase5-private-dev'
+'qtdeclarative5-dev'
+'qtquickcontrols2-5-dev'
+'qttools5-dev'
+'qttools5-dev-tools')
 source=("${pkgname}::git+https://github.com/cutefishos/kwin-plugins.git")
 md5sums=('SKIP')
 
