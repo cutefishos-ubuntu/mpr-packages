@@ -1,0 +1,2 @@
+#!/bin/bash
+tap install fishui libcutefish cutefish-wallpapers cutefish-statusbar cutefish-settings cutefish-qt-plugins cutefish-launcher cutefish-kwin-plugins cutefish-icons cutefish-filemanager cutefish-dock cutefish-core cutefish-screenlocker cutefish-calculator
