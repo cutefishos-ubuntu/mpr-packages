@@ -1,8 +1,9 @@
 <div align="center">
     <h1>MPR Package Repositorie</h1>
     <img height="150" src="https://dl.uploadgram.me/6119620f0356eh?raw">
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P45YTZ9)
 </div>
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P45YTZ9)
 
 This repository contains the PKGBUILDs of **Cutefish Desktop** environment in [MPR](https://mpr.hunterwittenborn.com/packages/?K=titenko&SeB=m) (*Makedeb Package Repository*) . If there is problem with each of them, please submit an issue and explain the problem.
 
