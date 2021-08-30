@@ -11,18 +11,18 @@ control_fields=("MPR-Package: ${pkgname}")
 license=('GPL')
 groups=('cutefish')
 depends=('fishui' 'libcutefish')
-makedepends=('extra-cmake-modules' 'qttools5-dev')
+makedepends=('extra-cmake-modules' 'qttools5-dev' 'qttools5-dev-tools')
 source=("${pkgname}::git+https://github.com/cutefishos/screenlocker.git")
 md5sums=('SKIP')
 
 build() {
-  cd screenlocker
+  cd cutefish-screenlocker
 
   cmake -DCMAKE_INSTALL_PREFIX=/usr .
   make
 }
 
 package() {
-  cd screenlocker
+  cd cutefish-screenlocker
   make DESTDIR="$pkgdir" install
 }

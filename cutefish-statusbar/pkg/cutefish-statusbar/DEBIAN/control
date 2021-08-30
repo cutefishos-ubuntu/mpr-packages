@@ -1,0 +1,9 @@
+Package: cutefish-statusbar
+Version: 0.4-1
+Description: Top status bar of CutefishOS
+Architecture: amd64
+License: GPL
+Maintainer: Maksym Titenko <titenko.m@gmail.com>, Aryan Pathania <aynp>
+Homepage: https://github.com/cutefishos/statusbar
+Depends: fishui, libcutefish, qml-module-qtquick-controls2, qml-module-qtquick2, qml-module-qtquick-layouts, qml-module-qt-labs-platform, qml-module-qt-labs-settings, qml-module-qtqml, qml-module-qtquick-window2, qml-module-qtquick-shapes, libc6, libgcc-s1, libkf5windowsystem5, libqt5core5a, libqt5dbus5, libqt5gui5, libqt5qml5, libqt5quick5, libqt5widgets5, libqt5x11extras5, libstdc++6, libxcb1
+MPR-Package: cutefish-statusbar
